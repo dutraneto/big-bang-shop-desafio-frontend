@@ -4,7 +4,11 @@ import './Home.scss'
 import Nav from '../Nav/Nav'
 
 const Home = () => {
-    return <Nav />
+    return (
+        <header className='home'>
+            <Nav />
+        </header>
+    )
 }
 
 export default Home

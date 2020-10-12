@@ -1,6 +1,8 @@
 import React from 'react'
 import './Nav.scss'
 
+import Logo from '../Logo/Logo'
+
 import { FiSearch, FiPackage, FiHeart, FiLogOut } from 'react-icons/fi'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { RiShoppingBasket2Line } from 'react-icons/ri'
@@ -39,10 +41,10 @@ const Nav = (props) => (
                 </a>
             </li>
         </ul>
-        <picture>
-            <img src='' alt='' />
-        </picture>
-        <ul className='nav'>
+
+        <Logo className='logo' />
+
+        <ul className='nav nav__right'>
             <li className='nav__item nav__item--icon'>
                 <a href='./' className='nav__link'>
                     <FiSearch />

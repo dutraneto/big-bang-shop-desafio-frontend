@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Chloe;
+    src: url(./fonts/Chloe-Regular.otf);
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url(./fonts/ProximaNova-Regular.otf);
+}
+
+:root {
+    --color-text: #666666;
+
+    --font-proxima: 'ProximaNova-Regular', sans-serif;
+    --font-chloe: 'Chloe', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    &,
+    &::before,
+    &::after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        /* inherited from HTML */
+    }
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    // line-height: 1.6;
+    color: #ffffff;
+    font-family: var(--font-proxima);
+}
+
+a {
+    &:link,
+    &:visited {
+        color: currentColor;
+        text-decoration: none;
+        &:active {
+            color: currentColor;
+        }
+    }
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
