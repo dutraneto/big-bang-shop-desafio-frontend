@@ -10,6 +10,7 @@
 
 :root {
     --color-text: #666666;
+    --color-verde: #73a8a0;
 
     --font-proxima: 'ProximaNova-Regular', sans-serif;
     --font-chloe: 'Chloe', sans-serif;
@@ -42,7 +43,7 @@ body {
 a {
     &:link,
     &:visited {
-        color: currentColor;
+        // color: currentColor;
         text-decoration: none;
         &:active {
             color: currentColor;

@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #c4c4c4;
-    padding: 15px 30px;
+    padding: 15px 30px 9px 30px;
 }
 
 .nav {
@@ -17,7 +17,6 @@ nav {
 
     &__item {
         font-size: 1rem;
-        color: var(--color-text);
         text-transform: uppercase;
 
         &:not(:first-child) {
@@ -26,10 +25,43 @@ nav {
 
         &--icon {
             font-size: 1.5rem;
+
+            &:not(:first-child) {
+                margin-left: 2.5rem !important;
+            }
         }
     }
 
     &__link {
+        transition: color 0.4s ease;
+        color: var(--color-text);
         text-decoration: none;
+        position: relative;
+        padding-bottom: 6px;
+
+        &:hover {
+            color: #000000;
+        }
+
+        &--count {
+            color: #ffffff;
+            background-color: var(--color-verde);
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.7rem;
+            position: absolute;
+            top: -70%;
+            right: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
+}
+
+.active {
+    color: #000000;
+    border-bottom: 3px solid var(--color-verde);
 }
