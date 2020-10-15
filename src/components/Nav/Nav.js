@@ -36,6 +36,7 @@ const Nav = (props) => {
 
             <Logo className='logo' />
 
+            {/* TODO: Refactor this */}
             <ul className='nav nav__right'>
                 <li className='nav__item nav__item--icon'>
                     <a href='./' className='nav__link'>

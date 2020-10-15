@@ -1,0 +1,14 @@
+.button {
+    padding: 0.75rem 2.75rem;
+    background: transparent;
+    background-color: var(--color-verde);
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        opacity: 90%;
+    }
+}
