@@ -1,0 +1,98 @@
+.gallery {
+    background-color: #ffffff;
+    display: grid;
+    grid-column: full-start/full-end;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 4vw);
+    grid-gap: 1.5rem;
+
+    &__item {
+        position: relative;
+        &--1 {
+            grid-row: 1 / span 6;
+            grid-column: 1 / span 6;
+        }
+
+        &--2 {
+            grid-row: 1 / 4;
+            grid-column: 7 / 11;
+        }
+
+        &--3 {
+            grid-row: 4 / 7;
+            grid-column: 7 / 9;
+        }
+
+        &--4 {
+            grid-row: 4 / 7;
+            grid-column: 9 / 11;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(70%);
+    }
+
+    &__title {
+        position: absolute;
+        font-family: var(--font-chloe);
+        color: #ffffff;
+
+        &--1 {
+            left: 20px;
+            right: 20px;
+            bottom: 70px;
+            line-height: 2.625rem;
+            font-size: 2.625rem;
+        }
+
+        &--2,
+        &--3,
+        &--4 {
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        &--4 {
+            bottom: 2rem;
+        }
+    }
+
+    &__desc {
+        position: absolute;
+        color: #fff;
+
+        &--1 {
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.125rem;
+        }
+
+        &--2,
+        &--3 {
+            bottom: 4.1875rem;
+        }
+
+        &--2,
+        &--3,
+        &--4 {
+            font-size: 0.75rem;
+            left: 10px;
+            right: 10px;
+        }
+
+        &--4 {
+            bottom: 10px;
+        }
+    }
+}
