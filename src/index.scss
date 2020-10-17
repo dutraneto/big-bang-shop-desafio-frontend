@@ -8,12 +8,18 @@
     src: url(./fonts/ProximaNova-Regular.otf);
 }
 
+@font-face {
+    font-family: ProximaNova-Thin;
+    src: url(./fonts/ProximaNova-Thin.otf);
+}
+
 :root {
     --color-text: #666666;
     --color-verde: #73a8a0;
     --color-cinzaclaro: #c4c4c4;
     --color-cinzaescuro: #333333;
     --font-proxima: 'ProximaNova-Regular', sans-serif;
+    --font-proxima-thin: 'ProximaNova-Thin', sans-serif;
     --font-chloe: 'Chloe', sans-serif;
 }
 
