@@ -6,11 +6,13 @@ import Button from '../Button/Button'
 
 const Advertisement = () => (
     <section className='ad'>
-        <img src={Ad} alt='Advertisement' />
+        <img className='ad__img' src={Ad} alt='Advertisement' />
         <div className='ad__cta'>
             <h2 className='ad__h2'>lorem ipsum dolor sit amet</h2>
             <p className='ad__desc'>lorem ipsum dolor sit amet</p>
-            <Button>lorem ipsum</Button>
+            <div className='ad__btn'>
+                <Button>lorem ipsum</Button>
+            </div>
         </div>
     </section>
 )

@@ -1,0 +1,30 @@
+@import '../../styles/breakpoints.scss';
+
+.header {
+    padding: 15px 30px 9px 30px;
+    border-bottom: 2px solid #c4c4c4;
+    display: flex;
+    align-items: center;
+
+    @include respond(laptop) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__menu {
+        display: none;
+        transition: color 0.4s;
+        font-size: 1.5rem;
+        color: var(--color-text);
+        cursor: pointer;
+        margin-left: 1.5rem;
+
+        &:hover {
+            color: #000;
+        }
+
+        @include respond(laptop) {
+            display: block;
+        }
+    }
+}

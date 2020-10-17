@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import './Nav.scss'
 
@@ -30,15 +30,15 @@ const Nav = (props) => {
 
     return (
         <nav>
-            <ul className='nav'>
+            <ul className='nav nav--left'>
                 <Router>{navList}</Router>
             </ul>
 
             <Logo className='logo' />
 
             {/* TODO: Refactor this */}
-            <ul className='nav nav__right'>
-                <li className='nav__item nav__item--icon'>
+            <ul className='nav nav--right'>
+                <li className='nav__item nav__item--icon nav__item--search'>
                     <a href='./' className='nav__link'>
                         <FiSearch />
                     </a>
@@ -48,7 +48,7 @@ const Nav = (props) => {
                         <FaRegUserCircle />
                     </a>
                 </li>
-                <li className='nav__item nav__item--icon'>
+                <li className='nav__item nav__item--icon nav__item--pack'>
                     <a href='./' className='nav__link'>
                         <FiPackage />
                     </a>
@@ -64,7 +64,7 @@ const Nav = (props) => {
                         <RiShoppingBasket2Line />
                     </a>
                 </li>
-                <li className='nav__item nav__item--icon'>
+                <li className='nav__item nav__item--icon nav__item--logout'>
                     <a href='./' className='nav__link'>
                         <FiLogOut />
                     </a>
