@@ -1,6 +1,6 @@
 # Big Bang - Desafio Frontend
 
-Front-end Development
+Front-end Development (This test is still on development. It will be finished soon 😅).
 
 ## This project has been deployed on Netlify. Check it out. 😀 🚀
 
