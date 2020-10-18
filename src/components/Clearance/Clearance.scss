@@ -1,9 +1,16 @@
+@import '../../styles/breakpoints.scss';
+
 .deals {
     &__list {
         display: flex;
         border-top: 1px solid var(--color-cinzaclaro);
         border-bottom: 1px solid var(--color-cinzaclaro);
         padding: 10px 0;
+
+        @include respond(tab-port) {
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
     }
 
     &__item {
@@ -33,6 +40,10 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+
+            @include respond(tab-port) {
+                width: 150px;
+            }
         }
 
         &-title {
