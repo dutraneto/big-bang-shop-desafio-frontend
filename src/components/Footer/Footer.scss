@@ -1,7 +1,14 @@
+@import '../../styles/breakpoints.scss';
+
 .footer {
     width: 100%;
     background-color: #000;
     padding: 3.0625rem 1.875rem 1.625rem;
+
+    @include respond(laptop) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     h4 {
         color: #ffffff;
@@ -9,6 +16,10 @@
         margin-bottom: 1.365rem;
         text-transform: capitalize;
         font-weight: bold;
+
+        @include respond(tab-land) {
+            font-size: 0.75rem;
+        }
     }
 
     p {
@@ -18,6 +29,9 @@
         font-family: var(--font-proxima-thin);
 
         a {
+            @include respond(tab-land) {
+                font-size: 0.75rem !important;
+            }
             color: currentColor;
             &:hover {
                 color: var(--color-verde);
@@ -34,12 +48,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            // align-content: center;
+            align-items: stretch;
+        }
     }
 
     &__img {
         width: 12.75rem;
         height: 6.125rem;
-        display: inline-block;
+        display: block;
+
+        @include respond(tab-land) {
+            width: 12.1875rem;
+            order: 1;
+            margin-bottom: 1.125rem;
+            align-self: center;
+        }
 
         img {
             width: 100%;
@@ -53,8 +80,17 @@
         justify-content: center;
         flex-grow: 2;
 
+        @include respond(tab-land) {
+            order: 2;
+            margin-bottom: 1.125rem;
+        }
+
         &-item:not(:first-child) {
             margin-left: 1.75rem;
+
+            @include respond(tab-land) {
+                margin-left: 3rem;
+            }
         }
 
         &-link {
@@ -65,17 +101,49 @@
             &:hover {
                 color: var(--color-verde);
             }
+
+            @include respond(tab-land) {
+                font-size: 1.5rem;
+            }
         }
     }
 
     &__info {
         display: flex;
-        flex-grow: 3;
-        justify-content: space-between;
+        flex-grow: 2;
+        justify-content: space-around;
         align-items: center;
+
+        @include respond(tab-land) {
+            order: 3;
+            border-top: 1px solid #fff;
+            padding-top: 1.125rem;
+            margin-bottom: 2.25rem;
+        }
+
+        h4 {
+            @include respond(tab-land) {
+                margin-bottom: 0.75rem;
+            }
+        }
 
         p {
             font-size: 15px;
+        }
+    }
+
+    &__form {
+        text-align: center;
+        @include respond(tab-land) {
+            order: 0;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 1.125rem;
+        }
+
+        h4 {
+            @include respond(tab-land) {
+                font-size: 1.125rem;
+            }
         }
 
         input {
@@ -86,6 +154,15 @@
             display: inline-block;
             font-size: 0.75rem;
             padding-left: 10px;
+
+            @include respond(tab-land) {
+                width: 22rem;
+                margin-bottom: 1.5rem;
+                align-self: center;
+            }
+            @include respond(phone) {
+                width: 100%;
+            }
         }
 
         button {
@@ -102,6 +179,26 @@
                 background: #fff;
                 color: #000;
             }
+
+            @include respond(tab-land) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__cia {
+        @include respond(laptop) {
+            max-width: 18.125rem;
+            text-align: center;
+        }
+
+        @include respond(tab-land) {
+            padding-top: 1.125rem;
+            order: 4;
+            align-self: center;
+            border-top: 1px solid #fff;
+            max-width: 100%;
+            width: 100%;
         }
     }
 
@@ -111,15 +208,47 @@
         color: #fff;
 
         &-item:not(:first-child) {
-            width: 13px;
-            height: 13px;
             margin-left: 10px;
+
+            @include respond(tab-land) {
+                margin-left: 1.5rem;
+            }
         }
 
         &-item {
+            svg {
+                @include respond(tab-land) {
+                    width: 1.5rem;
+                    height: auto;
+                }
+            }
             &--1 {
                 font-family: var(--font-proxima-thin);
             }
+        }
+
+        @include respond(tab-land) {
+            width: 100%;
+            order: 0;
+            justify-content: center;
+            align-self: center;
+            padding-bottom: 1.125rem;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__brand {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > div {
+            margin-right: 15px;
+        }
+
+        @include respond(tab-land) {
+            align-self: center;
+            justify-content: center;
         }
     }
 
@@ -130,10 +259,22 @@
         p {
             margin-left: 10px;
         }
+
+        @include respond(tab-land) {
+            order: 1;
+            width: 33%;
+            float: left;
+        }
     }
 
     &__faq {
         display: flex;
+
+        @include respond(tab-land) {
+            order: 3;
+            margin-top: 2.25rem;
+            margin-bottom: 1.125rem;
+        }
 
         p {
             &:last-child {
@@ -147,8 +288,15 @@
     }
 
     &__branding {
+        margin-right: 0 !important;
         a {
             font-family: var(--font-proxima);
+        }
+        @include respond(tab-land) {
+            order: 2;
+            width: 33%;
+            float: right;
+            clear: both;
         }
     }
 }
@@ -159,6 +307,10 @@
     color: #ffffff;
     margin: 2.5rem 0 1.6875rem;
     border-bottom: none;
+
+    @include respond(tab-land) {
+        display: none;
+    }
 }
 
 .font-size12 {

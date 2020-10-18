@@ -79,13 +79,13 @@ const Footer = () => {
                                 <a href='./'>(31) 2515 6200</a>
                             </p>
                         </div>
-                        <div>
-                            <h4>assine nossa newsletter</h4>
-                            <form action=''>
-                                <input type='email' placeholder='Seu endereço de email' />
-                                <button>assinar</button>
-                            </form>
-                        </div>
+                    </div>
+                    <div className='footer__form'>
+                        <h4>assine nossa newsletter</h4>
+                        <form action=''>
+                            <input type='email' placeholder='Seu endereço de email' />
+                            <button>assinar</button>
+                        </form>
                     </div>
                 </div>
                 <hr className='hr' />
@@ -113,23 +113,25 @@ const Footer = () => {
                             <FaBarcode />
                         </li>
                     </ul>
-                    <div className='footer__lock'>
-                        <FiLock />
-                        <p className='font-size12'>Site seguro</p>
-                    </div>
-                    <div className='footer__faq'>
-                        <p className='font-size12'>
-                            <a href='./'>Dúvidas Frequentes</a> |
-                        </p>
-                        <p className='font-size12'>
-                            <a href='./'>Políticas da Loja</a>
-                        </p>
-                    </div>
-                    <div className='footer__branding'>
-                        <p className='font-size12'>
-                            Site por:
-                            <a href='./'> BIG BANG SHOP</a>
-                        </p>
+                    <div className="footer__brand">
+                        <div className='footer__lock'>
+                            <FiLock />
+                            <p className='font-size12'>Site seguro</p>
+                        </div>
+                        <div className='footer__faq'>
+                            <p className='font-size12'>
+                                <a href='./'>Dúvidas Frequentes</a> |
+                            </p>
+                            <p className='font-size12'>
+                                <a href='./'>Políticas da Loja</a>
+                            </p>
+                        </div>
+                        <div className='footer__branding'>
+                            <p className='font-size12'>
+                                Site por:
+                                <a href='./'> BIG BANG SHOP</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
