@@ -4,11 +4,13 @@ import './Nav.scss'
 
 import Logo from '../Logo/Logo'
 
-import { FiSearch, FiPackage, FiHeart, FiLogOut } from 'react-icons/fi'
+import { FiSearch, FiPackage, FiHeart, FiLogOut, FiX } from 'react-icons/fi'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { RiShoppingBasket2Line } from 'react-icons/ri'
 
-const Nav = (props) => {
+const Nav = ({ isMenuOpen, setIsMenuOpen, openMenu }) => {
+    const state = isMenuOpen ? 'open' : ''
+
     const navItems = [
         { name: 'início' },
         { name: 'blog' },
@@ -30,7 +32,12 @@ const Nav = (props) => {
 
     return (
         <nav>
-            <ul className='nav nav--left'>
+            <ul className={`nav nav--left ${state}`}>
+                <li className='nav__item'>
+                    <span className='nav__link nav__close' onClick={openMenu}>
+                        <FiX />
+                    </span>
+                </li>
                 <Router>{navList}</Router>
             </ul>
 

@@ -8,11 +8,12 @@ import './Header.scss'
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const openMenu = () => setIsMenuOpen(!isMenuOpen)
+    console.log(isMenuOpen)
 
     return (
         <header className='header'>
             <Nav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} openMenu={openMenu} />
-            <span className='header__menu menu-open' onClick={openMenu}>
+            <span className='header__menu' onClick={openMenu}>
                 <FiMenu />
             </span>
         </header>

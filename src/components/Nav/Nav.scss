@@ -12,9 +12,50 @@ nav {
     list-style: none;
     width: calc((100% - 138px) / 2);
 
-    &--left {
+    &__close {
+        display: none;
+        position: absolute !important;
+        top: 30px;
+        right: 30px;
+
         @include respond(laptop) {
-            display: none;
+            display: block;
+        }
+    }
+
+    &--left {
+        display: none;
+        @include respond(laptop) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100vh;
+            z-index: 999;
+            background: linear-gradient(to right, var(--color-verde), var(--color-verde));
+            text-align: center;
+            padding: 2.5rem;
+            transform: translateX(100%);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+
+            & .nav__link {
+                @include respond(laptop) {
+                    color: #fff;
+                }
+            }
+
+            & .nav__item {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @include respond(phone) {
+            left: 0;
+            width: 100%;
+            align-items: center;
         }
     }
 
@@ -79,4 +120,11 @@ nav {
 .active {
     color: #000000;
     border-bottom: 3px solid var(--color-verde);
+}
+
+.open {
+    @include respond(laptop) {
+        transform: translateX(0);
+        transition: all 0.3s ease-in-out;
+    }
 }
