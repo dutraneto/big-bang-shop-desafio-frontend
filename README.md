@@ -40,11 +40,10 @@ npm start
 
 ## Snapshot
 
-<img src="./docs/8DCA8010-2919-4B6F-9C42-41A592A90980.gif" alt="phone"
-	title="tablet" width="500" />
+![](./docs/8DCA8010-2919-4B6F-9C42-41A592A90980.gif)
 
-<img src="./docs/15C3ECE2-14F9-45AD-8E4F-831D34D65C7B.gif" alt="phone"
-	title="tablet" width="500" />
+![](./docs/15C3ECE2-14F9-45AD-8E4F-831D34D65C7B.gif)
+
 
 
 
