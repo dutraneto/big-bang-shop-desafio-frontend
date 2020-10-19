@@ -38,6 +38,16 @@ npm start
 - <a href='https://www.w3.org/TR/css-grid-1/'>Grid Layout</a>
 - <a href='https://bigbang-shop.netlify.app/'>Site Deployed on Netlify</a>
 
+## Snapshot
+
+<img src="./docs/8DCA8010-2919-4B6F-9C42-41A592A90980.gif" alt="phone"
+	title="tablet" width="500" />
+
+<img src="./docs/15C3ECE2-14F9-45AD-8E4F-831D34D65C7B.gif" alt="phone"
+	title="tablet" width="500" />
+
+
+
 ## Submentendo a entrega
 
 Envie um email para thiago@bigbangcomunicacao.com.br com o link para o seu código (repositório público no GitHub).
