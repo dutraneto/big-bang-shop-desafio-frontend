@@ -5,6 +5,7 @@ import Advertisement from '../Advertisement/Advertisement'
 import Gallery from '../Gallery/Gallery'
 import Clearance from '../Clearance/Clearance'
 import Blog from '../Blog/Blog'
+import Shop from '../Shop/Shop'
 
 const Main = () => {
     return (
@@ -13,6 +14,7 @@ const Main = () => {
             <Gallery />
             <Clearance />
             <Blog />
+            <Shop />
         </main>
     )
 }

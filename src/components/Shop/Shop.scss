@@ -1,0 +1,11 @@
+@import '../../styles/breakpoints.scss';
+
+.shop {
+    margin-bottom: 7.5rem;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        align-self: center;
+    }
+}
