@@ -16,6 +16,12 @@
     @include respond(tab-port) {
         font-size: 0.75rem;
     }
+    @include respond(phone) {
+        display: block;
+        text-align: center;
+        height: 2.9375rem;
+        font-size: 0.874rem;
+    }
 
     &:hover {
         opacity: 90%;

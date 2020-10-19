@@ -4,8 +4,7 @@ import './Main.scss'
 import Advertisement from '../Advertisement/Advertisement'
 import Gallery from '../Gallery/Gallery'
 import Clearance from '../Clearance/Clearance'
-
-import HorizontalRule from '../HorizontalRule/HorizontalRule'
+import Blog from '../Blog/Blog'
 
 const Main = () => {
     return (
@@ -13,7 +12,7 @@ const Main = () => {
             <Advertisement />
             <Gallery />
             <Clearance />
-            <HorizontalRule>Blog</HorizontalRule>
+            <Blog />
         </main>
     )
 }
