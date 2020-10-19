@@ -1,0 +1,30 @@
+@import '../../styles/breakpoints.scss';
+
+.horizontal-rule {
+    font-family: var(--font-chloe);
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+        font-size: 2.25rem;
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: var(--color-cinzaclaro);
+        flex-grow: 1;
+    }
+
+    &::after {
+        margin-left: 10px;
+    }
+    &::before {
+        margin-right: 10px;
+    }
+}

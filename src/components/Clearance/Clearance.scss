@@ -1,6 +1,8 @@
 @import '../../styles/breakpoints.scss';
 
 .deals {
+    margin-bottom: 9rem;
+
     &__list {
         display: flex;
         border-top: 1px solid var(--color-cinzaclaro);
