@@ -64,6 +64,14 @@ li {
     list-style: none;
 }
 
+input {
+    border-radius: 0;
+
+    &[type='email'] {
+        -webkit-appearance: none;
+    }
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;

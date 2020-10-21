@@ -6,11 +6,22 @@
             text-align: center;
             margin-bottom: 3.125rem;
 
+            @include respond(tab-land) {
+                margin-bottom: 1.5rem;
+            }
+
             h3 {
                 font-family: var(--font-chloe);
                 font-size: 2.5rem;
                 margin-bottom: 1.25rem;
                 color: #000;
+
+                @include respond(tab-land) {
+                    margin-bottom: 12px;
+                }
+                @include respond(phone) {
+                    font-size: 1.875rem;
+                }
             }
 
             p {
@@ -24,14 +35,35 @@
             margin-bottom: 5.125rem;
             text-align: center;
 
+            @include respond(tab-land) {
+                margin-bottom: 1.5rem;
+            }
+
+            @include respond(phone) {
+                display: flex;
+                justify-content: space-between;
+            }
+
             &__control {
                 border: 1px solid var(--color-text);
+                border-radius: 0;
                 width: 100%;
                 display: block;
                 padding: 1rem;
                 color: var(--color-text);
                 font-size: 1.125rem;
                 margin-bottom: 1.875rem;
+
+                &[type='email'] {
+                    -webkit-appearance: none;
+                }
+
+                @include respond(phone) {
+                    display: inline;
+                    // width: 70%;
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                }
             }
             &__btn {
                 transition: all 0.4s;
@@ -40,6 +72,11 @@
                 border: 1px solid #000;
                 padding: 1rem 2rem;
                 text-transform: uppercase;
+
+                @include respond(phone) {
+                    padding: 14px 12px;
+                    font-size: 14px;
+                }
 
                 &:hover {
                     background-color: #000;

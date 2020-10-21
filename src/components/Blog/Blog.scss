@@ -9,8 +9,16 @@
         display: grid;
         gap: 3.75rem 1.5rem;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(9, 4rem);
+        grid-template-rows: repeat(10, 4rem);
         margin-bottom: 3.75rem;
+
+        @include respond(tab-land) {
+            gap: 1.5rem;
+            grid-template-rows: repeat(14, 4rem);
+        }
+        @include respond(phone) {
+            column-gap: 15px;
+        }
     }
 
     &__item {
@@ -22,26 +30,72 @@
         &--1 {
             grid-column: 1 / span 3;
             grid-row: 1 / span 4;
+
+            @include respond(tab-land) {
+                grid-row: 1 / span 3;
+            }
+            @include respond(phone) {
+                grid-column: 1 / 7;
+                grid-row: 1 / span 4;
+            }
         }
         &--2 {
-            grid-column: 4 / span 3;
+            grid-column: 4 / 7;
             grid-row: 1 / span 4;
+
+            @include respond(tab-land) {
+                grid-row: 1 / span 3;
+            }
+            @include respond(phone) {
+                grid-column: 1 / 7;
+                grid-row: 5 / span 4;
+            }
         }
         &--3 {
             grid-column: 1 / span 2;
             grid-row: 5 / span 3;
+
+            @include respond(tab-land) {
+                grid-column: 1 / span 3;
+                grid-row: 4 / span 3;
+            }
+            @include respond(phone) {
+                grid-column: 1 / span 3;
+                grid-row: 9 / span 2;
+            }
         }
         &--4 {
             grid-column: 3 / span 2;
             grid-row: 5 / span 3;
+
+            @include respond(tab-land) {
+                grid-column: 4 / 7;
+                grid-row: 4 / span 3;
+            }
+            @include respond(phone) {
+                grid-column: 4 / 7;
+                grid-row: 9 / span 2;
+            }
         }
 
         &-form {
             border: 2px solid #000;
-            grid-column: 5 / span 2;
+            grid-column: 5 / 7;
             grid-row: 5 / span 5;
 
+            @include respond(tab-land) {
+                grid-column: 1 / 7;
+                grid-row: 10 / 15;
+            }
+            @include respond(phone) {
+                grid-row: 14 / 16;
+            }
+
             padding: 3.125rem 2.5rem;
+
+            @include respond(phone) {
+                padding: 0.9375rem 0.75rem;
+            }
         }
 
         &-img {
@@ -69,6 +123,10 @@
             font-size: 2.25rem;
             margin-bottom: 20px;
             margin-top: 20px;
+
+            @include respond(tab-land) {
+                font-size: 1.125rem;
+            }
             &--1,
             &--2 {
                 left: 20px;

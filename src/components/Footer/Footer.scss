@@ -152,9 +152,8 @@
             height: 36px;
             margin-right: 6px;
             display: inline-block;
-            font-size: 0.75rem;
+            font-size: 1rem;
             padding-left: 10px;
-
             @include respond(tab-land) {
                 width: 22rem;
                 margin-bottom: 1.5rem;
@@ -297,6 +296,10 @@
             width: 33%;
             float: right;
             clear: both;
+        }
+
+        @include respond(phone) {
+            width: 40%;
         }
     }
 }
