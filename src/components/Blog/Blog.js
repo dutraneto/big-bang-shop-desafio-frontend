@@ -4,6 +4,7 @@ import data from './data'
 
 import HorizontalRule from '../HorizontalRule/HorizontalRule'
 import Button from '../Button/Button'
+import CardEmail from '../CardEmail/CardEmail'
 
 export default function Blog(props) {
     const listOfPosts = data.map(({ id, src, title, subtitle, author, highlights }) => {
@@ -37,7 +38,9 @@ export default function Blog(props) {
             <HorizontalRule>Blog</HorizontalRule>
             <ul className='posts__list'>
                 {listOfPosts}
-                <li className='posts__item posts__item-form'></li>
+                <li className='posts__item posts__item-form'>
+                    <CardEmail />
+                </li>
             </ul>
             <Button>Veja todos os posts ⟶</Button>
         </section>
