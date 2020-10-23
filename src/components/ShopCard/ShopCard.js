@@ -4,7 +4,20 @@ import { FiHeart } from 'react-icons/fi'
 import formatPrice from '../../utils/formatPrice'
 
 export default function ShopCard(props) {
-    const { isFavorite, handleClick, id, src, title, subtitle, price } = props
+    const [isMarked, setIsMarked] = React.useState(false)
+    const { isFavorite, setIsFavorite, id, src, title, subtitle, price } = props
+
+    const handleClick = (id) => {
+        const currentFavorites = [...isFavorite]
+        if (!isMarked) {
+            setIsMarked(true)
+            if (!currentFavorites.includes(id)) setIsFavorite([...isFavorite, id])
+        } else {
+            setIsMarked(false)
+            if (currentFavorites.includes(id))
+                setIsFavorite(currentFavorites.filter((i) => i !== id))
+        }
+    }
     const state = isFavorite.indexOf(id) >= 0 ? 'fav' : ''
     return (
         <li className={`products__item products__item--${id}`}>

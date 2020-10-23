@@ -8,19 +8,13 @@ import ShopCard from '../ShopCard/ShopCard'
 
 export default function Shop(props) {
     const [isFavorite, setIsFavorite] = useState([])
-    const handleClick = (id) => {
-        if (isFavorite.includes(id)) return
-        setIsFavorite([...isFavorite, id])
-        console.log(isFavorite)
-    }
 
     const listProducts = products.map((product) => {
         return (
             <ShopCard
                 key={product.id}
                 isFavorite={isFavorite}
-                // setIsFavorite={setIsFavorite}
-                handleClick={handleClick}
+                setIsFavorite={setIsFavorite}
                 {...product}
             />
         )
