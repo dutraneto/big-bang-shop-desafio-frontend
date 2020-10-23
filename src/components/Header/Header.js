@@ -8,7 +8,6 @@ import './Header.scss'
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const openMenu = () => setIsMenuOpen(!isMenuOpen)
-    console.log(isMenuOpen)
 
     return (
         <header className='header'>

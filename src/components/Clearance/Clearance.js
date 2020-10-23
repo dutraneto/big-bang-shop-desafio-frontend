@@ -2,6 +2,7 @@ import React from 'react'
 import './Clearance.scss'
 
 import deals from './deals'
+import formatPrice from '../../utils/formatPrice'
 
 const Clearance = () => {
     const listOfDeals = deals.map(({ id, src, title, detail, price }) => {
@@ -12,7 +13,7 @@ const Clearance = () => {
                         <img className='deals__item-img' src={src} alt={title} />
                         <figcaption className='deals__item-title'>{title}</figcaption>
                         <p className='deals__item-detail'>{detail}</p>
-                        <span className='deals__item-price'>R$ {price.toFixed(2)}</span>
+                        <span className='deals__item-price'>{formatPrice(price)}</span>
                     </picture>
                 </a>
             </li>

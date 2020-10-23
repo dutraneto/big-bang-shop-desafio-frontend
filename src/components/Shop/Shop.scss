@@ -34,11 +34,14 @@
                     border-radius: 50%;
                     padding: 10px 7px 8px;
 
-                    .fav {
+                    svg {
                         color: #333;
                         &:hover {
                             fill: #333;
                         }
+                    }
+                    .fav {
+                        fill: #333;
                     }
                 }
             }
