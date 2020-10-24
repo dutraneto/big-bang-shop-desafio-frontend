@@ -1,4 +1,4 @@
-# Big Bang - Desafio Frontend
+# BigBang Shop E-commerce - Frontend
 
 Front-end Development (This test is still on development. It will be finished soon 😅).
 
@@ -43,10 +43,3 @@ npm start
 ![](docs/8DCA8010-2919-4B6F-9C42-41A592A90980.GIF)
 
 ![](docs/15C3ECE2-14F9-45AD-8E4F-831D34D65C7B.GIF)
-
-
-
-
-## Submentendo a entrega
-
-Envie um email para thiago@bigbangcomunicacao.com.br com o link para o seu código (repositório público no GitHub).
