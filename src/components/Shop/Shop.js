@@ -26,7 +26,6 @@ export default function Shop(props) {
             <ul className='dots'>
                 <li className='dots__item active'></li>
                 <li className='dots__item'></li>
-                <li className='dots__item'></li>
             </ul>
             <Button>Veja todos os produtos ⟶</Button>
         </section>
